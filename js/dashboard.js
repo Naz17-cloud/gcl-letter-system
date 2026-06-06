@@ -229,5 +229,10 @@ function setText(
             value;
 
     }
-
+document
+.getElementById(
+"totalSurat"
+)
+.innerText =
+data.length;
 }
