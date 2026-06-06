@@ -772,3 +772,72 @@ textarea{
     }
 
 }
+/* ==========================================
+   TOAST
+========================================== */
+
+.toast{
+
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    min-width:250px;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-weight:600;
+
+    display:none;
+
+    z-index:9999;
+
+    animation:
+    fadeToast .3s ease;
+
+}
+
+.toast-success{
+
+    background:#22C55E;
+
+}
+
+.toast-danger{
+
+    background:#EF4444;
+
+}
+
+.toast-warning{
+
+    background:#F59E0B;
+
+}
+
+@keyframes fadeToast{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
