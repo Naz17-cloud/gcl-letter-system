@@ -1,25 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="id">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Dashboard Staff
-    </title>
+<title>
+Dashboard Staff
+</title>
 
-    <link
-        rel="stylesheet"
-        href="css/main.css">
+<link
+rel="stylesheet"
+href="css/main.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
 </head>
 
@@ -27,234 +28,225 @@
 
 <div class="wrapper">
 
-    <!-- SIDEBAR -->
+```
+<!-- SIDEBAR -->
 
-    <aside class="sidebar">
+<aside class="sidebar">
 
-        <div class="sidebar-logo">
+    <div class="sidebar-logo">
 
-            GCL SYSTEM
+        GCL SYSTEM
+
+    </div>
+
+    <nav>
+
+        <a
+            href="dashboard.html"
+            class="active">
+
+            Dashboard
+
+        </a>
+
+        <a href="request.html">
+
+            Request Nomor Surat
+
+        </a>
+
+        <a href="history.html">
+
+            Riwayat Surat
+
+        </a>
+
+        <a href="#">
+
+            Cari Surat
+
+        </a>
+
+        <a
+            href="index.html"
+            class="logout-btn">
+
+            Logout
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- CONTENT -->
+
+<main class="main">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1 id="greetingText">
+
+                Selamat Datang
+
+            </h1>
+
+            <p>
+
+                Gateway Container Line
+
+            </p>
 
         </div>
 
-        <nav>
+    </div>
 
-            <a
-                href="dashboard.html"
-                class="active">
+    <!-- CARD STATISTIK -->
 
-                Dashboard
+    <section class="cards">
 
-            </a>
+        <div class="card">
 
-            <a href="request.html">
+            <div class="stat-title">
 
-                Request Nomor Surat
+                Total Surat
 
-            </a>
+            </div>
 
-            <a href="history.html">
+            <div
+                class="stat-value"
+                id="totalSurat">
 
-                Riwayat Surat
-
-            </a>
-
-            <a href="#">
-
-                Cari Surat
-
-            </a>
-
-            <a href="index.html">
-
-                Logout
-
-            </a>
-
-        </nav>
-
-    </aside>
-
-    <!-- CONTENT -->
-
-    <main class="main">
-
-        <div class="page-header">
-
-            <div>
-
-                <h1>
-                    Dashboard Staff
-                </h1>
-
-                <p>
-                    Selamat datang di
-                    GCL Letter System
-                </p>
+                0
 
             </div>
 
         </div>
 
-        <!-- CARD STATISTIK -->
+        <div class="card">
 
-        <section class="cards">
+            <div class="stat-title">
 
-            <div class="card">
-
-                <div class="stat-title">
-                    Total Surat Saya
-                </div>
-
-                <div class="stat-value">
-                    28
-                </div>
+                Surat Bulan Ini
 
             </div>
 
-            <div class="card">
+            <div
+                class="stat-value"
+                id="suratBulanIni">
 
-                <div class="stat-title">
-                    Surat Bulan Ini
-                </div>
-
-                <div class="stat-value">
-                    11
-                </div>
+                0
 
             </div>
 
-            <div class="card">
+        </div>
 
-                <div class="stat-title">
-                    Surat Hari Ini
-                </div>
+        <div class="card">
 
-                <div class="stat-value">
-                    2
-                </div>
+            <div class="stat-title">
+
+                Surat Hari Ini
 
             </div>
 
-            <div class="card">
+            <div
+                class="stat-value"
+                id="suratHariIni">
 
-                <div class="stat-title">
-                    Status Sistem
-                </div>
-
-                <div class="stat-value">
-                    Online
-                </div>
+                0
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- RIWAYAT TERAKHIR -->
+        <div class="card">
 
-        <section
-            class="table-card"
-            style="margin-top:25px;">
+            <div class="stat-title">
 
-            <h2
-                style="
-                margin-bottom:20px;">
+                Status Sistem
+
+            </div>
+
+            <div
+                class="stat-value"
+                id="systemStatus">
+
+                Online
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RIWAYAT TERAKHIR -->
+
+    <section
+        class="table-card"
+        style="margin-top:25px;">
+
+        <div class="section-header">
+
+            <h2>
 
                 Riwayat Surat Terakhir
 
             </h2>
 
-            <table>
+            <button
+                class="btn btn-primary"
+                onclick="location.href='request.html'">
 
-                <thead>
+                + Request Surat
 
-                    <tr>
+            </button>
 
-                        <th>
-                            Nomor Surat
-                        </th>
+        </div>
 
-                        <th>
-                            Kode
-                        </th>
+        <table>
 
-                        <th>
-                            Perihal
-                        </th>
+            <thead>
 
-                        <th>
-                            Status
-                        </th>
+                <tr>
 
-                    </tr>
+                    <th>
+                        Nomor Surat
+                    </th>
 
-                </thead>
+                    <th>
+                        Kode
+                    </th>
 
-                <tbody>
+                    <th>
+                        Perihal
+                    </th>
 
-                    <tr>
+                    <th>
+                        Status
+                    </th>
 
-                        <td>
-                            GCL-SUB/SPDO/127/VI/2026
-                        </td>
+                </tr>
 
-                        <td>
-                            SPDO
-                        </td>
+            </thead>
 
-                        <td>
-                            Permohonan Delivery Order
-                        </td>
+            <tbody id="recentLetters">
 
-                        <td>
+            </tbody>
 
-                            <span
-                                class="status-active">
+        </table>
 
-                                ACTIVE
+    </section>
 
-                            </span>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>
-                            GCL-SUB/SPC/128/VI/2026
-                        </td>
-
-                        <td>
-                            SPC
-                        </td>
-
-                        <td>
-                            Peminjaman Container
-                        </td>
-
-                        <td>
-
-                            <span
-                                class="status-active">
-
-                                ACTIVE
-
-                            </span>
-
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-    </main>
+</main>
+```
 
 </div>
+
+<script src="js/app.js"></script>
+
+<script src="js/dashboard.js"></script>
 
 </body>
 
