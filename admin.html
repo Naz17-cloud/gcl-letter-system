@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 
 <head>
@@ -10,7 +11,7 @@ name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Administrator Dashboard
+Admin Dashboard
 </title>
 
 <link
@@ -27,341 +28,230 @@ rel="stylesheet">
 
 <div class="wrapper">
 
-    <!-- SIDEBAR -->
+```
+<!-- SIDEBAR -->
 
-    <aside class="sidebar">
+<aside class="sidebar">
 
-        <div class="sidebar-logo">
+    <div class="sidebar-logo">
 
-            GCL ADMIN
+        GCL ADMIN
+
+    </div>
+
+    <nav>
+
+        <a
+            href="admin.html"
+            class="active">
+
+            Dashboard
+
+        </a>
+
+        <a href="history.html">
+
+            Riwayat Surat
+
+        </a>
+
+        <a href="#">
+
+            Master Kode Surat
+
+        </a>
+
+        <a href="#">
+
+            Manajemen User
+
+        </a>
+
+        <a href="#">
+
+            Export Excel
+
+        </a>
+
+        <a
+            href="index.html"
+            class="logout-btn">
+
+            Logout
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <div class="page-header">
+
+        <h1>
+
+            Dashboard Administrator
+
+        </h1>
+
+        <p>
+
+            Gateway Container Line
+
+        </p>
+
+    </div>
+
+    <!-- STATISTICS -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <div class="stat-title">
+
+                Total Surat
+
+            </div>
+
+            <div
+                class="stat-value"
+                id="totalLetters">
+
+                0
+
+            </div>
 
         </div>
 
-        <nav>
+        <div class="card">
 
-            <a
-                href="admin.html"
-                class="active">
+            <div class="stat-title">
 
-                Dashboard
+                Surat Tahun Ini
 
-            </a>
+            </div>
 
-            <a href="#">
+            <div
+                class="stat-value"
+                id="yearLetters">
 
-                Master Kode Surat
+                0
 
-            </a>
-
-            <a href="#">
-
-                Manajemen User
-
-            </a>
-
-            <a href="#">
-
-                Export Excel
-
-            </a>
-
-            <a href="index.html">
-
-                Logout
-
-            </a>
-
-        </nav>
-
-    </aside>
-
-    <!-- MAIN CONTENT -->
-
-    <main class="main">
-
-        <div class="page-header">
-
-            <h1>
-                Administrator Dashboard
-            </h1>
-
-            <p>
-                Gateway Container Line
-            </p>
+            </div>
 
         </div>
 
-        <!-- CARD STATISTIK -->
+        <div class="card">
 
-        <section class="cards">
+            <div class="stat-title">
 
-            <div class="card">
-
-                <div class="stat-title">
-
-                    Total Surat
-
-                </div>
-
-                <div class="stat-value">
-
-                    845
-
-                </div>
+                Surat Hari Ini
 
             </div>
 
-            <div class="card">
+            <div
+                class="stat-value"
+                id="todayLetters">
 
-                <div class="stat-title">
-
-                    Surat Tahun Ini
-
-                </div>
-
-                <div class="stat-value">
-
-                    215
-
-                </div>
+                0
 
             </div>
 
-            <div class="card">
+        </div>
 
-                <div class="stat-title">
+        <div class="card">
 
-                    Total User
+            <div class="stat-title">
 
-                </div>
-
-                <div class="stat-value">
-
-                    23
-
-                </div>
+                Total Staff Aktif
 
             </div>
 
-            <div class="card">
+            <div
+                class="stat-value"
+                id="totalUsers">
 
-                <div class="stat-title">
-
-                    Total Kode Surat
-
-                </div>
-
-                <div class="stat-value">
-
-                    16
-
-                </div>
+                0
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- MASTER KODE SURAT -->
+    </section>
 
-        <section
-            class="table-card"
-            style="margin-top:25px;">
+    <!-- SURAT TERBARU -->
 
-            <div class="section-header">
+    <section
+        class="table-card"
+        style="margin-top:25px;">
 
-                <h2>
+        <div class="section-header">
 
-                    Master Kode Surat
+            <h2>
 
-                </h2>
-
-                <button
-                    class="btn btn-primary">
-
-                    Tambah Kode
-
-                </button>
-
-            </div>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>Kode</th>
-                        <th>Nama Surat</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-
-                        <td>SPDO</td>
-
-                        <td>
-                            Surat Permohonan DO
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>SPC</td>
-
-                        <td>
-                            Surat Pinjam Container
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>SK</td>
-
-                        <td>
-                            Surat Kuasa
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-        <!-- USER MANAGEMENT -->
-
-        <section
-            class="table-card"
-            style="margin-top:25px;">
-
-            <div class="section-header">
-
-                <h2>
-
-                    Manajemen User
-
-                </h2>
-
-                <button
-                    class="btn btn-primary">
-
-                    Tambah User
-
-                </button>
-
-            </div>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Role</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-
-                        <td>
-                            Mohammad Nasrulloh
-                        </td>
-
-                        <td>
-                            admin@gcl.com
-                        </td>
-
-                        <td>
-                            Administrator
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-        <!-- SURAT TERBARU -->
-
-        <section
-            class="table-card"
-            style="margin-top:25px;">
-
-            <h2
-                style="margin-bottom:20px;">
-
-                Surat Terbaru
+                10 Surat Terbaru
 
             </h2>
 
-            <table>
+            <a
+                href="history.html"
+                class="btn btn-primary">
 
-                <thead>
+                Lihat Semua
 
-                    <tr>
+            </a>
 
-                        <th>No Surat</th>
-                        <th>Kode</th>
-                        <th>Pemohon</th>
-                        <th>Status</th>
+        </div>
 
-                    </tr>
+        <table>
 
-                </thead>
+            <thead>
 
-                <tbody>
+                <tr>
 
-                    <tr>
+                    <th>
+                        Nomor Surat
+                    </th>
 
-                        <td>
-                            GCL-SUB/SPDO/127/VI/2026
-                        </td>
+                    <th>
+                        Peminta
+                    </th>
 
-                        <td>
-                            SPDO
-                        </td>
+                    <th>
+                        Kode
+                    </th>
 
-                        <td>
-                            Mohammad Nasrulloh
-                        </td>
+                    <th>
+                        Tanggal
+                    </th>
 
-                        <td>
+                    <th>
+                        Status
+                    </th>
 
-                            <span
-                                class="status-active">
+                </tr>
 
-                                ACTIVE
+            </thead>
 
-                            </span>
+            <tbody
+                id="recentLetters">
 
-                        </td>
+            </tbody>
 
-                    </tr>
+        </table>
 
-                </tbody>
+    </section>
 
-            </table>
-
-        </section>
-
-    </main>
+</main>
+```
 
 </div>
+
+<script src="js/app.js"></script>
 
 <script src="js/admin.js"></script>
 
