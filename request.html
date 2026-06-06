@@ -1,166 +1,29 @@
-<form id="requestForm">
+<div class="sidebar">
 
-```
-<div class="request-grid">
+    <div class="sidebar-logo">
 
-    <!-- INFORMASI PEMOHON -->
-
-    <div class="form-card-section">
-
-        <h3 class="section-title">
-            👤 Informasi Pemohon
-        </h3>
-
-        <div class="form-group">
-
-            <label>
-                Nama Peminta
-            </label>
-
-            <input
-                type="text"
-                id="requesterName"
-                placeholder="Contoh: Mohammad Nasrulloh"
-                required>
-
-        </div>
-
-        <div class="form-group">
-
-            <label>
-                Email Peminta
-            </label>
-
-            <input
-                type="email"
-                id="requesterEmail"
-                placeholder="nama@gcl.com"
-                required>
-
-        </div>
+        GCL STAFF
 
     </div>
 
-    <!-- INFORMASI SURAT -->
+    <nav>
 
-    <div class="form-card-section">
+        <a
+        href="request.html"
+        class="active">
 
-        <h3 class="section-title">
-            📄 Informasi Surat
-        </h3>
+        Request Nomor Surat
 
-        <div class="form-group">
+        </a>
 
-            <label>
-                Jenis Surat
-            </label>
+        <a
+        href="index.html"
+        class="logout-btn">
 
-            <select id="code">
+        Logout
 
-                <option value="TGS">TGS - Surat Tugas</option>
-                <option value="SK">SK - Surat Kuasa</option>
-                <option value="LOI">LOI</option>
-                <option value="PLP">PLP</option>
-                <option value="SPC">SPC - Surat Pinjam Container</option>
-                <option value="SI">Shipping Instruction</option>
-                <option value="STC">Surat Stack Container</option>
-                <option value="PI">Permohonan Interchange</option>
-                <option value="SPDO">Surat Permohonan DO</option>
-                <option value="SPR">Surat Permohonan Redress</option>
-                <option value="SP">Surat Peringatan</option>
-                <option value="SPT">Surat Pertanggungjawaban</option>
-                <option value="PMH">Surat Permohonan</option>
-                <option value="SPN">Surat Pernyataan</option>
-                <option value="PGJ">Surat Pengajuan</option>
-                <option value="QUO">Quotation</option>
+        </a>
 
-            </select>
-
-        </div>
-
-        <div class="form-group">
-
-            <label>
-                Perihal Surat
-            </label>
-
-            <input
-                type="text"
-                id="subject"
-                placeholder="Masukkan Perihal Surat"
-                required>
-
-        </div>
-
-        <div class="form-group">
-
-            <label>
-                Tujuan Surat
-            </label>
-
-            <input
-                type="text"
-                id="destination"
-                placeholder="Contoh: PT Pelindo"
-                required>
-
-        </div>
-
-    </div>
+    </nav>
 
 </div>
-
-<!-- KETERANGAN -->
-
-<div class="form-card-section full-width">
-
-    <h3 class="section-title">
-        📝 Keterangan Tambahan
-    </h3>
-
-    <div class="form-group">
-
-        <textarea
-            id="description"
-            placeholder="Masukkan keterangan tambahan jika diperlukan"></textarea>
-
-    </div>
-
-</div>
-
-<!-- PREVIEW NOMOR SURAT -->
-
-<div class="preview-card">
-
-    <div class="preview-label">
-
-        NOMOR SURAT YANG AKAN DIGUNAKAN
-
-    </div>
-
-    <div
-        id="previewBox"
-        class="preview-number">
-
-        GCL-SUB/TGS/001/I/2026
-
-    </div>
-
-</div>
-
-<!-- BUTTON -->
-
-<div class="action-area">
-
-    <button
-        type="submit"
-        class="btn btn-primary generate-btn">
-
-        🚀 GENERATE NOMOR SURAT
-
-    </button>
-
-</div>
-```
-
-</form>
