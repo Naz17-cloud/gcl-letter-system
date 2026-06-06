@@ -3,303 +3,259 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dashboard</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-display:flex;
-background:#f1f5f9;
-}
-
-.sidebar{
-
-width:260px;
-height:100vh;
-
-background:#0f172a;
-
-padding:25px;
-
-position:fixed;
-
-}
-
-.logo{
-color:white;
-font-size:24px;
-font-weight:700;
-margin-bottom:30px;
-}
-
-.menu a{
-
-display:block;
-
-padding:14px;
-
-margin-bottom:10px;
-
-text-decoration:none;
-
-background:#1e293b;
-
-color:white;
-
-border-radius:12px;
-
-transition:.3s;
-}
-
-.menu a:hover{
-
-background:#2563eb;
-
-transform:translateX(5px);
-
-}
-
-.main{
-
-margin-left:260px;
-
-width:100%;
-
-padding:30px;
-
-}
-
-.header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:25px;
-
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-}
-
-.card{
-
-background:white;
-
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,.08);
-
-}
-
-.card h3{
-
-color:#64748b;
-
-font-size:14px;
-
-margin-bottom:10px;
-
-}
-
-.card h2{
-
-font-size:28px;
-
-color:#0f172a;
-
-}
-
-.table-box{
-
-margin-top:30px;
-
-background:white;
-
-padding:20px;
-
-border-radius:18px;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,.08);
-
-}
-
-table{
-
-width:100%;
-
-border-collapse:collapse;
-
-}
-
-table th{
-
-background:#0f172a;
-
-color:white;
-
-padding:12px;
-
-}
-
-table td{
-
-padding:12px;
-
-border-bottom:
-1px solid #e5e7eb;
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Dashboard Staff
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="sidebar">
+<div class="wrapper">
 
-<div class="logo">
+    <!-- SIDEBAR -->
 
-GCL SYSTEM
+    <aside class="sidebar">
 
-</div>
+        <div class="sidebar-logo">
 
-<div class="menu">
+            GCL SYSTEM
 
-<a href="#">
-Dashboard
-</a>
+        </div>
 
-<a href="request.html">
-Request Nomor Surat
-</a>
+        <nav>
 
-<a href="history.html">
-Riwayat Surat
-</a>
+            <a
+                href="dashboard.html"
+                class="active">
 
-<a href="#">
-Cari Surat
-</a>
+                Dashboard
 
-<a href="#">
-Logout
-</a>
+            </a>
 
-</div>
+            <a href="request.html">
 
-</div>
+                Request Nomor Surat
 
-<div class="main">
+            </a>
 
-<div class="header">
+            <a href="history.html">
 
-<h1>
-Dashboard Staff
-</h1>
+                Riwayat Surat
 
-</div>
+            </a>
 
-<div class="cards">
+            <a href="#">
 
-<div class="card">
+                Cari Surat
 
-<h3>Total Surat Saya</h3>
+            </a>
 
-<h2>28</h2>
+            <a href="index.html">
 
-</div>
+                Logout
 
-<div class="card">
+            </a>
 
-<h3>Surat Bulan Ini</h3>
+        </nav>
 
-<h2>11</h2>
+    </aside>
 
-</div>
+    <!-- CONTENT -->
 
-<div class="card">
+    <main class="main">
 
-<h3>Surat Hari Ini</h3>
+        <div class="page-header">
 
-<h2>2</h2>
+            <div>
 
-</div>
+                <h1>
+                    Dashboard Staff
+                </h1>
 
-</div>
+                <p>
+                    Selamat datang di
+                    GCL Letter System
+                </p>
 
-<div class="table-box">
+            </div>
 
-<h2 style="margin-bottom:15px;">
-Riwayat Surat Terakhir
-</h2>
+        </div>
 
-<table>
+        <!-- CARD STATISTIK -->
 
-<thead>
+        <section class="cards">
 
-<tr>
+            <div class="card">
 
-<th>No Surat</th>
+                <div class="stat-title">
+                    Total Surat Saya
+                </div>
 
-<th>Kode</th>
+                <div class="stat-value">
+                    28
+                </div>
 
-<th>Perihal</th>
+            </div>
 
-<th>Tanggal</th>
+            <div class="card">
 
-</tr>
+                <div class="stat-title">
+                    Surat Bulan Ini
+                </div>
 
-</thead>
+                <div class="stat-value">
+                    11
+                </div>
 
-<tbody>
+            </div>
 
-<tr>
+            <div class="card">
 
-<td>GCL-SUB/SPDO/127/VI/2026</td>
+                <div class="stat-title">
+                    Surat Hari Ini
+                </div>
 
-<td>SPDO</td>
+                <div class="stat-value">
+                    2
+                </div>
 
-<td>Permohonan Delivery Order</td>
+            </div>
 
-<td>02/06/2026</td>
+            <div class="card">
 
-</tr>
+                <div class="stat-title">
+                    Status Sistem
+                </div>
 
-</tbody>
+                <div class="stat-value">
+                    Online
+                </div>
 
-</table>
+            </div>
 
-</div>
+        </section>
+
+        <!-- RIWAYAT TERAKHIR -->
+
+        <section
+            class="table-card"
+            style="margin-top:25px;">
+
+            <h2
+                style="
+                margin-bottom:20px;">
+
+                Riwayat Surat Terakhir
+
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nomor Surat
+                        </th>
+
+                        <th>
+                            Kode
+                        </th>
+
+                        <th>
+                            Perihal
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            GCL-SUB/SPDO/127/VI/2026
+                        </td>
+
+                        <td>
+                            SPDO
+                        </td>
+
+                        <td>
+                            Permohonan Delivery Order
+                        </td>
+
+                        <td>
+
+                            <span
+                                class="status-active">
+
+                                ACTIVE
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            GCL-SUB/SPC/128/VI/2026
+                        </td>
+
+                        <td>
+                            SPC
+                        </td>
+
+                        <td>
+                            Peminjaman Container
+                        </td>
+
+                        <td>
+
+                            <span
+                                class="status-active">
+
+                                ACTIVE
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
 
 </div>
 
 </body>
+
 </html>
