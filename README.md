@@ -1,2 +1,1 @@
-# gcl-letter-system
-GCL Letter Numbering System
+# GCL Letter System
