@@ -1,170 +1,192 @@
-// ==========================================
-// GCL LETTER SYSTEM
-// REQUEST SCRIPT v1.0
-// ==========================================
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const code =
-        document.getElementById("code");
+```
+const code = document.getElementById("code");
+const form = document.getElementById("requestForm");
+const previewBox = document.getElementById("previewBox");
 
-    const form =
-        document.getElementById("requestForm");
+function getRomanMonth(month) {
 
-    const previewBox =
-        document.getElementById("previewBox");
+    const roman = [
+        "I","II","III","IV","V","VI",
+        "VII","VIII","IX","X","XI","XII"
+    ];
 
-    const requesterName =
-document
-.getElementById("requesterName")
-.value;
+    return roman[month - 1];
+}
 
-const requesterEmail =
-document
-.getElementById("requesterEmail")
-.value;
+function getNextNumber() {
 
-    // ==========================================
-    // DEMO DATA
-    // NANTI DIGANTI FIREBASE
-    // ==========================================
+    const letters =
+        JSON.parse(
+            localStorage.getItem("letters")
+        ) || [];
 
-    let currentNumber = 1;
+    return letters.length + 1;
+}
 
-    function getRomanMonth(month) {
+function updatePreview() {
 
-        const roman = [
-            "I",
-            "II",
-            "III",
-            "IV",
-            "V",
-            "VI",
-            "VII",
-            "VIII",
-            "IX",
-            "X",
-            "XI",
-            "XII"
-        ];
+    const now = new Date();
 
-        return roman[month - 1];
+    const year =
+        now.getFullYear();
 
-    }
+    const month =
+        getRomanMonth(
+            now.getMonth() + 1
+        );
 
-    function updatePreview() {
+    const number =
+        String(
+            getNextNumber()
+        ).padStart(3,"0");
 
-        const now = new Date();
+    previewBox.innerText =
+        `GCL-SUB/${code.value}/${number}/${month}/${year}`;
 
-        const year =
-            now.getFullYear();
+}
 
-        const month =
-            getRomanMonth(
-                now.getMonth() + 1
-            );
+updatePreview();
 
-        const number =
-            String(currentNumber)
-            .padStart(3, "0");
+code.addEventListener(
+    "change",
+    updatePreview
+);
 
-        previewBox.innerHTML =
+form.addEventListener(
+    "submit",
+    function(e){
 
-            `GCL-SUB/${code.value}/${number}/${month}/${year}`;
+        e.preventDefault();
 
-    }
+        const requesterName =
+            document
+            .getElementById("requesterName")
+            .value
+            .trim();
 
-    updatePreview();
+        const requesterEmail =
+            document
+            .getElementById("requesterEmail")
+            .value
+            .trim();
 
-    code.addEventListener(
-        "change",
-        updatePreview
-    );
+        const subject =
+            document
+            .getElementById("subject")
+            .value
+            .trim();
 
-    form.addEventListener(
-        "submit",
-        function (e) {
+        const destination =
+            document
+            .getElementById("destination")
+            .value
+            .trim();
 
-            e.preventDefault();
+        const description =
+            document
+            .getElementById("description")
+            .value
+            .trim();
 
-            const subject =
-                document
-                .getElementById("subject")
-                .value
-                .trim();
-
-            const destination =
-                document
-                .getElementById("destination")
-                .value
-                .trim();
-
-            if (!subject) {
-
-                alert(
-                    "Perihal Surat wajib diisi."
-                );
-
-                return;
-
-            }
-
-            if (!destination) {
-
-                alert(
-                    "Tujuan Surat wajib diisi."
-                );
-
-                return;
-
-            }
+        if(!requesterName){
 
             alert(
-                "Nomor Surat Berhasil Dibuat :\n\n" +
-                previewBox.innerText
+                "Nama Peminta wajib diisi."
             );
 
-            currentNumber++;
-
-            updatePreview();
-
-            form.reset();
-
+            return;
         }
-    );
-const letters =
-JSON.parse(
-localStorage.getItem("letters")
-) || [];
 
-letters.push({
+        if(!requesterEmail){
 
-    number:
-    previewBox.innerText,
+            alert(
+                "Email Peminta wajib diisi."
+            );
 
-    requester:
-    requesterName,
+            return;
+        }
 
-    email:
-    requesterEmail,
+        if(!subject){
 
-    subject:
-    subject,
+            alert(
+                "Perihal Surat wajib diisi."
+            );
 
-    destination:
-    destination,
+            return;
+        }
 
-    status:
-    "ACTIVE",
+        if(!destination){
 
-    createdAt:
-    new Date()
-    .toLocaleString("id-ID")
+            alert(
+                "Tujuan Surat wajib diisi."
+            );
 
-});
+            return;
+        }
 
-localStorage.setItem(
-    "letters",
-    JSON.stringify(letters)
+        const letters =
+            JSON.parse(
+                localStorage.getItem("letters")
+            ) || [];
+
+        const letterData = {
+
+            number:
+                previewBox.innerText,
+
+            code:
+                code.value,
+
+            requester:
+                requesterName,
+
+            email:
+                requesterEmail,
+
+            subject:
+                subject,
+
+            destination:
+                destination,
+
+            description:
+                description,
+
+            status:
+                "ACTIVE",
+
+            createdAt:
+                new Date()
+                .toLocaleString(
+                    "id-ID"
+                )
+
+        };
+
+        letters.push(
+            letterData
+        );
+
+        localStorage.setItem(
+            "letters",
+            JSON.stringify(
+                letters
+            )
+        );
+
+        alert(
+            "Nomor Surat Berhasil Dibuat\n\n" +
+            letterData.number
+        );
+
+        form.reset();
+
+        updatePreview();
+
+    }
 );
+```
+
 });
