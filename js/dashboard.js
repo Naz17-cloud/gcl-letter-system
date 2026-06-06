@@ -123,7 +123,10 @@ function loadDashboardStats() {
 
 function loadRecentLetters() {
 
-    const data = [
+   const data =
+JSON.parse(
+localStorage.getItem("letters")
+) || [];
 
         {
             number:
