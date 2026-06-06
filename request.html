@@ -3,198 +3,23 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Request Nomor Surat</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f1f5f9;
-}
-
-.wrapper{
-display:flex;
-}
-
-.sidebar{
-
-width:260px;
-height:100vh;
-
-position:fixed;
-
-background:#0f172a;
-
-padding:25px;
-
-}
-
-.sidebar h2{
-
-color:white;
-margin-bottom:30px;
-
-}
-
-.sidebar a{
-
-display:block;
-
-padding:14px;
-
-margin-bottom:10px;
-
-border-radius:12px;
-
-background:#1e293b;
-
-color:white;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.sidebar a:hover{
-
-background:#2563eb;
-
-}
-
-.main{
-
-margin-left:260px;
-
-width:100%;
-
-padding:35px;
-
-}
-
-.page-title{
-
-font-size:30px;
-
-font-weight:700;
-
-margin-bottom:25px;
-
-color:#0f172a;
-
-}
-
-.form-card{
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,.08);
-
-}
-
-.form-group{
-
-margin-bottom:18px;
-
-}
-
-label{
-
-display:block;
-
-margin-bottom:8px;
-
-font-weight:500;
-
-}
-
-input,
-select,
-textarea{
-
-width:100%;
-
-padding:14px;
-
-border:
-1px solid #d1d5db;
-
-border-radius:12px;
-
-font-size:14px;
-
-}
-
-textarea{
-
-height:120px;
-
-resize:none;
-
-}
-
-.preview{
-
-margin-top:20px;
-
-padding:18px;
-
-border-radius:12px;
-
-background:#eff6ff;
-
-border-left:
-5px solid #2563eb;
-
-font-weight:600;
-
-}
-
-.btn{
-
-margin-top:20px;
-
-padding:14px 25px;
-
-border:none;
-
-border-radius:12px;
-
-background:#FFF200;
-
-color:#0f172a;
-
-font-weight:700;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-2px);
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Request Nomor Surat
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -202,128 +27,229 @@ transform:translateY(-2px);
 
 <div class="wrapper">
 
-<div class="sidebar">
+    <!-- SIDEBAR -->
 
-<h2>GCL SYSTEM</h2>
+    <aside class="sidebar">
 
-<a href="dashboard.html">Dashboard</a>
+        <div class="sidebar-logo">
 
-<a href="request.html">
-Request Nomor Surat
-</a>
+            GCL SYSTEM
 
-<a href="history.html">
-Riwayat Surat
-</a>
+        </div>
 
-<a href="#">
-Logout
-</a>
+        <nav>
+
+            <a href="dashboard.html">
+
+                Dashboard
+
+            </a>
+
+            <a
+                href="request.html"
+                class="active">
+
+                Request Nomor Surat
+
+            </a>
+
+            <a href="history.html">
+
+                Riwayat Surat
+
+            </a>
+
+            <a href="index.html">
+
+                Logout
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="main">
+
+        <div class="page-header">
+
+            <h1>
+                Request Nomor Surat
+            </h1>
+
+            <p>
+                Buat nomor surat baru
+            </p>
+
+        </div>
+
+        <div class="form-card">
+
+            <form id="requestForm">
+
+                <!-- KODE SURAT -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Kode Surat
+
+                    </label>
+
+                    <select id="code">
+
+                        <option value="TGS">
+                            TGS - Surat Tugas
+                        </option>
+
+                        <option value="SK">
+                            SK - Surat Kuasa
+                        </option>
+
+                        <option value="LOI">
+                            LOI
+                        </option>
+
+                        <option value="PLP">
+                            PLP
+                        </option>
+
+                        <option value="SPC">
+                            SPC - Surat Pinjam Container
+                        </option>
+
+                        <option value="SI">
+                            Shipping Instruction
+                        </option>
+
+                        <option value="STC">
+                            Surat Stack Container
+                        </option>
+
+                        <option value="PI">
+                            Permohonan Interchange
+                        </option>
+
+                        <option value="SPDO">
+                            Surat Permohonan DO
+                        </option>
+
+                        <option value="SPR">
+                            Surat Permohonan Redress
+                        </option>
+
+                        <option value="SP">
+                            Surat Peringatan
+                        </option>
+
+                        <option value="SPT">
+                            Surat Pertanggungjawaban
+                        </option>
+
+                        <option value="PMH">
+                            Surat Permohonan
+                        </option>
+
+                        <option value="SPN">
+                            Surat Pernyataan
+                        </option>
+
+                        <option value="PGJ">
+                            Surat Pengajuan
+                        </option>
+
+                        <option value="QUO">
+                            Quotation
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- PERIHAL -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Perihal Surat
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Masukkan perihal surat"
+                        required>
+
+                </div>
+
+                <!-- TUJUAN -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Tujuan Surat
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="destination"
+                        placeholder="Contoh: PT Pelindo"
+                        required>
+
+                </div>
+
+                <!-- KETERANGAN -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Keterangan
+
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Keterangan tambahan"></textarea>
+
+                </div>
+
+                <!-- PREVIEW -->
+
+                <div
+                    class="preview-box"
+                    id="previewBox">
+
+                    GCL-SUB/TGS/001/I/2026
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    GENERATE NOMOR SURAT
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
 
 </div>
 
-<div class="main">
-
-<h1 class="page-title">
-
-Request Nomor Surat
-
-</h1>
-
-<div class="form-card">
-
-<div class="form-group">
-
-<label>Kode Surat</label>
-
-<select id="code">
-
-<option value="TGS">TGS - Surat Tugas</option>
-<option value="SK">SK - Surat Kuasa</option>
-<option value="LOI">LOI</option>
-<option value="PLP">PLP</option>
-<option value="SPC">SPC</option>
-<option value="SI">SI</option>
-<option value="STC">STC</option>
-<option value="PI">PI</option>
-<option value="SPDO">SPDO</option>
-<option value="SPR">SPR</option>
-<option value="SP">SP</option>
-<option value="SPT">SPT</option>
-<option value="PMH">PMH</option>
-<option value="SPN">SPN</option>
-<option value="PGJ">PGJ</option>
-<option value="QUO">QUO</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label>Perihal Surat</label>
-
-<input
-type="text"
-placeholder="Masukkan perihal surat">
-
-</div>
-
-<div class="form-group">
-
-<label>Tujuan Surat</label>
-
-<input
-type="text"
-placeholder="Contoh: PT Pelindo">
-
-</div>
-
-<div class="form-group">
-
-<label>Keterangan</label>
-
-<textarea
-placeholder="Keterangan tambahan"></textarea>
-
-</div>
-
-<div class="preview" id="preview">
-
-Preview Nomor Surat:
-GCL-SUB/SPDO/001/VI/2026
-
-</div>
-
-<button class="btn">
-
-GENERATE NOMOR SURAT
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-const code =
-document.getElementById("code");
-
-const preview =
-document.getElementById("preview");
-
-code.addEventListener("change",()=>{
-
-preview.innerHTML=
-`Preview Nomor Surat:
-GCL-SUB/${code.value}/001/VI/2026`;
-
-});
-
-</script>
+<script src="js/request.js"></script>
 
 </body>
 
