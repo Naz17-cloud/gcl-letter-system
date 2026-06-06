@@ -1,1 +1,206 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Riwayat</title><link rel="stylesheet" href="css/main.css"></head><body><div class="page"><h1>Riwayat Surat</h1><table><tr><th>Nomor</th><th>Kode</th></tr><tr><td>Demo</td><td>SPDO</td></tr></table></div></body></html>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riwayat Surat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f1f5f9;
+}
+
+.wrapper{
+display:flex;
+}
+
+.sidebar{
+width:260px;
+height:100vh;
+position:fixed;
+background:#0f172a;
+padding:25px;
+}
+
+.sidebar h2{
+color:white;
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+padding:14px;
+margin-bottom:10px;
+border-radius:12px;
+background:#1e293b;
+color:white;
+text-decoration:none;
+}
+
+.main{
+margin-left:260px;
+width:100%;
+padding:35px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.filter{
+display:grid;
+grid-template-columns:2fr 1fr 1fr auto;
+gap:15px;
+margin-bottom:20px;
+}
+
+input,select{
+padding:12px;
+border:1px solid #d1d5db;
+border-radius:10px;
+}
+
+button{
+padding:12px 18px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #e5e7eb;
+}
+
+.status{
+background:#dcfce7;
+color:#166534;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="sidebar">
+
+<h2>GCL SYSTEM</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="request.html">Request Surat</a>
+<a href="history.html">Riwayat Surat</a>
+<a href="#">Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>Riwayat Surat</h1>
+
+<br>
+
+<div class="card">
+
+<div class="filter">
+
+<input
+type="text"
+placeholder="Cari Nomor Surat">
+
+<select>
+
+<option>Semua Kode</option>
+<option>SPDO</option>
+<option>SPC</option>
+<option>SK</option>
+
+</select>
+
+<select>
+
+<option>2026</option>
+<option>2027</option>
+
+</select>
+
+<button>
+Cari
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nomor Surat</th>
+<th>Kode</th>
+<th>Perihal</th>
+<th>Tujuan</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>GCL-SUB/SPDO/127/VI/2026</td>
+<td>SPDO</td>
+<td>Permohonan DO</td>
+<td>PT Pelindo</td>
+<td><span class="status">ACTIVE</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
