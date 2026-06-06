@@ -1,62 +1,11 @@
-// =======================================
-// GCL LETTER SYSTEM
-// LOGIN SCRIPT v1.0
-// =======================================
+if(role === "admin"){
 
-document.addEventListener("DOMContentLoaded", () => {
+    window.location.href =
+    "admin.html";
 
-    const loginForm =
-        document.getElementById("loginForm");
+}else{
 
-    loginForm.addEventListener(
-        "submit",
-        function (e) {
+    window.location.href =
+    "request.html";
 
-            e.preventDefault();
-
-            const email =
-                document
-                .getElementById("email")
-                .value
-                .trim();
-
-            const password =
-                document
-                .getElementById("password")
-                .value
-                .trim();
-
-            if (!email || !password) {
-
-                alert(
-                    "Email dan Password wajib diisi."
-                );
-
-                return;
-            }
-
-            /*
-            ======================================
-            FIREBASE LOGIN
-            AKAN DITAMBAHKAN NANTI
-            ======================================
-            */
-
-            if (
-                email.includes("admin")
-            ) {
-
-                window.location.href =
-                    "admin.html";
-
-            } else {
-
-                window.location.href =
-                    "dashboard.html";
-
-            }
-
-        }
-    );
-
-});
+}
