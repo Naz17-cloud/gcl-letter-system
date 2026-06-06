@@ -1,4 +1,37 @@
-<div class="sidebar">
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Request Nomor Surat
+</title>
+
+<link
+rel="stylesheet"
+href="css/main.css">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+```
+<!-- SIDEBAR STAFF -->
+
+<aside class="sidebar">
 
     <div class="sidebar-logo">
 
@@ -9,21 +42,247 @@
     <nav>
 
         <a
-        href="request.html"
-        class="active">
+            href="request.html"
+            class="active">
 
-        Request Nomor Surat
+            Request Nomor Surat
 
         </a>
 
         <a
-        href="index.html"
-        class="logout-btn">
+            href="index.html"
+            class="logout-btn">
 
-        Logout
+            Logout
 
         </a>
 
     </nav>
 
+</aside>
+
+<!-- CONTENT -->
+
+<main class="main">
+
+    <div class="page-header">
+
+        <h1>
+
+            Request Nomor Surat
+
+        </h1>
+
+        <p>
+
+            Gateway Container Line
+
+        </p>
+
+    </div>
+
+    <!-- USER LOGIN -->
+
+    <div
+        class="preview-card"
+        style="margin-bottom:20px;">
+
+        <div class="preview-label">
+
+            LOGIN SEBAGAI
+
+        </div>
+
+        <div
+            id="currentUserBox"
+            class="preview-number">
+
+            loading...
+
+        </div>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="form-card">
+
+        <form id="requestForm">
+
+            <div class="request-grid">
+
+                <!-- PEMOHON -->
+
+                <div class="form-card-section">
+
+                    <h3 class="section-title">
+
+                        Informasi Pemohon
+
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Nama Peminta
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="requesterName"
+                            placeholder="Masukkan Nama Peminta"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- SURAT -->
+
+                <div class="form-card-section">
+
+                    <h3 class="section-title">
+
+                        Informasi Surat
+
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Jenis Surat
+
+                        </label>
+
+                        <select id="code">
+
+                            <option value="TGS">TGS - Surat Tugas</option>
+                            <option value="SK">SK - Surat Kuasa</option>
+                            <option value="LOI">LOI</option>
+                            <option value="PLP">PLP</option>
+                            <option value="SPC">SPC - Surat Pinjam Container</option>
+                            <option value="SI">Shipping Instruction</option>
+                            <option value="STC">Surat Stack Container</option>
+                            <option value="PI">Permohonan Interchange</option>
+                            <option value="SPDO">Surat Permohonan DO</option>
+                            <option value="SPR">Surat Permohonan Redress</option>
+                            <option value="SP">Surat Peringatan</option>
+                            <option value="SPT">Surat Pertanggungjawaban</option>
+                            <option value="PMH">Surat Permohonan</option>
+                            <option value="SPN">Surat Pernyataan</option>
+                            <option value="PGJ">Surat Pengajuan</option>
+                            <option value="QUO">Quotation</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Perihal Surat
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Masukkan Perihal Surat"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Tujuan Surat
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destination"
+                            placeholder="Contoh: PT Pelindo"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- KETERANGAN -->
+
+            <div class="form-card-section full-width">
+
+                <h3 class="section-title">
+
+                    Keterangan Tambahan
+
+                </h3>
+
+                <div class="form-group">
+
+                    <textarea
+                        id="description"
+                        placeholder="Masukkan keterangan tambahan"></textarea>
+
+                </div>
+
+            </div>
+
+            <!-- PREVIEW -->
+
+            <div class="preview-card">
+
+                <div class="preview-label">
+
+                    NOMOR SURAT YANG AKAN DIGUNAKAN
+
+                </div>
+
+                <div
+                    id="previewBox"
+                    class="preview-number">
+
+                    GCL-SUB/TGS/001/I/2026
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <div class="action-area">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary generate-btn">
+
+                    GENERATE NOMOR SURAT
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+```
+
 </div>
+
+<script src="js/app.js"></script>
+
+<script src="js/request.js"></script>
+
+</body>
+
+</html>
