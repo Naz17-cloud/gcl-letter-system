@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const previewBox =
         document.getElementById("previewBox");
 
+    const requesterName =
+document
+.getElementById("requesterName")
+.value;
+
+const requesterEmail =
+document
+.getElementById("requesterEmail")
+.value;
+
     // ==========================================
     // DEMO DATA
     // NANTI DIGANTI FIREBASE
@@ -122,5 +132,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     );
+const letters =
+JSON.parse(
+localStorage.getItem("letters")
+) || [];
 
+letters.push({
+
+    number:
+    previewBox.innerText,
+
+    requester:
+    requesterName,
+
+    email:
+    requesterEmail,
+
+    subject:
+    subject,
+
+    destination:
+    destination,
+
+    status:
+    "ACTIVE",
+
+    createdAt:
+    new Date()
+    .toLocaleString("id-ID")
+
+});
+
+localStorage.setItem(
+    "letters",
+    JSON.stringify(letters)
+);
 });
